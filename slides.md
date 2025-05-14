@@ -10,7 +10,7 @@ layout: intro
 
 # LLM SATs FTW
 
-Augmenting Analyst Descision Making with AI driven Structured Analytic Techniques
+Augmenting Analyst Decision Making with AI driven Structured Analytic Techniques
 
 <div class="absolute bottom-10">
   <span class="font-600">
@@ -58,7 +58,8 @@ layout: quote
 
 # The Problem
 
-SATs are hard to learn, hard to use, and hard to teach, take too long.
+# SATs are hard to learn, hard to use, hard to teach, work best in teams, and take too long to execute effectively.
+
 
 ---
 level: 2
@@ -73,11 +74,6 @@ layout: section
 
 # Experiments
 
----
-level: 2
----
-
-# SAT #1 - Starbursting
 
 ---
 
@@ -90,10 +86,86 @@ level: 2
 <!-- A Brainstorming technique -->
 
 ---
+title: Starbursting Screenshot 1
+layout: image
+image: images/starburst_1.png
+---
+
+---
+title: Starbursting Screenshot 2
+layout: image
+image: images/starburst_2.png
+---
+ 
+---
+title: Starbursting JSON
 level: 2
 ---
 
-# SAT #2 - Analysis of Competing Hypotheses (ACH)
+```json
+{
+  "topic": "A ransomware attack on a hospital",
+  "answer_who": [
+    "Who carried out the ransomware attack on the hospital?",
+    "Who was affected by the ransomware attack on the hospital?",
+    "Who responded to the ransomware attack on the hospital?"
+  ],
+  "answer_what": [
+    "What was the impact of the ransomware attack on the hospital?",
+    "What measures were taken to mitigate the ransomware attack on the hospital?",
+    "What was the ransom demand in the ransomware attack on the hospital?"
+  ],
+  "answer_when": [
+    "When did the ransomware attack on the hospital occur?",
+    "When was the ransomware attack on the hospital discovered?",
+    "When was the ransomware attack on the hospital resolved?"
+  ],
+  "answer_where": [
+    "Where did the ransomware attack on the hospital originate from?",
+    "Where were the hospital's systems affected by the ransomware attack?",
+    "Where was the response to the ransomware attack coordinated from?"
+  ],
+  "answer_why": [
+    "Why was the hospital targeted in the ransomware attack?",
+    "Why was the ransomware attack on the hospital successful?",
+    "Why did the ransomware attack on the hospital cause the damage it did?"
+  ]
+}
+```
+
+---
+level: 2
+---
+# Starbursting Visual Output
+
+```mermaid {theme: 'neutral', scale: 0.8}
+---
+config:
+  theme: neo
+---
+mindmap
+  root((A ransomware attack on a hospital))
+    Who
+      Who carried out the ransomware attack on the hospital?
+      Who was affected by the ransomware attack on the hospital?
+      Who responded to the ransomware attack on the hospital?
+    What
+      What was the impact of the ransomware attack on the hospital?
+      What measures were taken to mitigate the ransomware attack on the hospital?
+      What was the ransom demand in the ransomware attack on the hospital?
+    When
+      When did the ransomware attack on the hospital occur?
+      When was the ransomware attack on the hospital discovered?
+      When was the ransomware attack on the hospital resolved?
+    Where
+      Where did the ransomware attack on the hospital originate from?
+      Where were the hospital's systems affected by the ransomware attack?
+      Where was the response to the ransomware attack coordinated from?
+    Why
+      Why was the hospital targeted in the ransomware attack?
+      Why was the ransomware attack on the hospital successful?
+      Why did the ransomware attack on the hospital cause the damage it did?
+```
 
 ---
 
@@ -106,7 +178,48 @@ level: 2
 <!-- A Hypothesis Generation and Testing technique -->
 
 ---
+title: ACH
+---
+
+# Analysis of Competing Hypotheses
+
+- Built a Streamlit app to run the ACH SAT
+- Multi stage process based on the SAT
+    - Accepts a complex question
+    - First API Call: Generate a list of hypotheses
+    - Second Set of API Calls: Generate a list of evidence for/against each hypothesis
+    - Third Set of API Calls: Score each hypothesis based on the evidence
+- Ouput a CSV file with the results for human review
+- **Test Case:** Who was behind the XZ backdoor?
+
+---
+title: ACH Screenshot 1
+layout: image
+image: images/ach_1.png
 level: 2
+---
+
+---
+title: ACH Screenshot 2
+layout: image
+image: images/ach_2.png
+level: 2
+---
+
+---
+title: ACH Screenshot 3
+layout: image
+image: images/ach_3.png
+level: 2
+---
+
+---
+title: ACH Output
+level: 2
+---
+
+![ACH Matrix](./images/ach_matrix.png)
+
 ---
 
 # SAT #3 - Key Assumptions Check
@@ -122,10 +235,51 @@ level: 2
 <!-- An Assessment of Cause and Effect Technique-->
 
 ---
+layout: image-right
+image: images/strider.png
+---
+# Key Assumptions Check
+
+- Built a Streamlit app to run the Key Assumptions Check SAT
+    - Accepts a PDF file, extracts text
+    - Zero-shot classification of the text
+    - Generates a list of key assumptions
+- **Test Case:** [Strider Technologies - Inside the Shadow Network](https://content.striderintel.com/wp-content/uploads/2025/05/Strider-Inside-Shadow-Network-Report.pdf)
+    - The report is about North Korean IT workers and their involvement in cybercrime
+
+---
+title: Key Assumptions Check Screenshot 1
+layout: image
+image: images/kac_1.png
+---
+
+---
+title: Key Assumptions Check Screenshot 2
+layout: image
+image: images/kac_2.png
+---
+
+---
+
+# Key Assumptions Check
+
+- The document assumes that IT workers are involved in the manipulation of cryptocurrency markets, including the use of malware to mine cryptocurrencies.
+- The document assumes that North Korean IT workers are dispatched abroad to countries like the PRC, Russia, Southeast Asia, Africa, and the Middle East.
+- The document assumes that North Korean IT workers are involved in cybercrime activities such as hacking, ransomware deployment, and intellectual property theft.
+- The document assumes that North Korean IT workers are using false identities and front companies to infiltrate Western businesses.
+- The document assumes that PRC-based entities are involved in shipping equipment for DPRK remote workers.
+- The document assumes that PRC-based front companies are facilitating the global operations of fraudulent North Korean IT workers.
+
+[...]
+
+---
 level: 2
+layout: fact
 ---
 
 # Results & Limitations
+
+## Well it depends...
 
 ---
 layout: section
@@ -165,16 +319,9 @@ level: 2
 layout: fact
 ---
 
-# AI
-## Artificial Intelligence
+# AI → IA
+## Artificial Intelligence to Intelligence Augmentation
 
----
-level: 2
-layout: fact
----
-
-# IA
-## Intelligence Augmentation
 
 ---
 
@@ -186,14 +333,10 @@ layout: fact
 - An AI system doesn't have to be better than a human, just better than the best available human
 
 ---
+title: Vibe Check
 layout: image
 image: https://i.kym-cdn.com/entries/icons/original/000/053/522/vibe_vibe.jpg
-background-size: contain
 ---
-
----
-
-# Resources
 
 ---
 layout: image-right
@@ -203,8 +346,9 @@ image: https://avatars.githubusercontent.com/u/44774?v=4
 # Contact
 
 - [sroberts.io](https://sroberts.io)
-- [taurus.blue](https://taurus.blue)
-- [LinkedIn: linkedin.com/in/scottroberts](https://www.linkedin.com/in/scottroberts/)
+- [taurus.blue](https://taurus.blue) & [usu.edu](https://www.usu.edu)
+- [linkedin.com/in/scottroberts](https://www.linkedin.com/in/scottroberts/)
+- [github.com/sroberts/talk-llm-sats-ftw-code](https://github.com/sroberts/talk-llm-sats-ftw-code)
 
 ---
 layout: end
