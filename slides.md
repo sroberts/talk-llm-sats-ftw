@@ -86,6 +86,18 @@ layout: section
 <!-- A Brainstorming technique -->
 
 ---
+title: Starbursting
+---
+
+# Starbursting
+
+- Built a Streamlit app to run the Starbursting SAT
+- Zero shot based on the SAT
+    - Given a scenario, generate questions for who, what, when, where, why, and how
+- Ouput a JSON file with the results for human review
+- **Test Case:** A ransomware attack on a hospital
+
+---
 title: Starbursting Screenshot 1
 layout: image
 image: images/starburst_1.png
