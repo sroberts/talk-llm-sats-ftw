@@ -201,7 +201,7 @@ title: ACH
     - First API Call: Generate a list of hypotheses
     - Second Set of API Calls: Generate a list of evidence for/against each hypothesis
     - Third Set of API Calls: Score each hypothesis based on the evidence
-- Ouput a CSV file with the results for human review
+- Output a CSV file with the results for human review
 - **Test Case:** Who was behind the XZ backdoor?
 
 ---
