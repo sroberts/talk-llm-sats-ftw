@@ -52,7 +52,7 @@ layout: quote
 
 # "Structured analysis is a mechanism by which internal thought processes are externalized in a systemic and transparent manner so that they can be shared, built on, and easily critiqued by others."
 
-~ Structred Analytic Techniques for Intelligence Analysis by Heuer & Pherson
+~ Structured Analytic Techniques for Intelligence Analysis by Heuer & Pherson
 
 ---
 
